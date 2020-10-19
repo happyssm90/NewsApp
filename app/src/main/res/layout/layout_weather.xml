@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="160dp"
+    android:background="@drawable/sky_back"
+    android:orientation="vertical"
+    android:padding="@dimen/dimen_10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/text_view_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Bangalore"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/text_view_city_weather_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="4dp"
+            android:text="Scattered cloud"
+            android:textColor="@android:color/white"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/text_view_temperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="4dp"
+            android:text="45"
+            android:textColor="@android:color/white"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/text_view_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="center_horizontal"
+                android:text="Wed, 25 Apr 2020"
+                android:textColor="@android:color/white"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="12dp"
+                android:layout_marginRight="12dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/text_view_max_temperature"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/text_view_min_temperature"
+                    android:layout_marginBottom="4dp"
+                    android:text="Max: 27"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/text_view_min_temperature"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:text="Min: 23"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/weather_progress_bar"
+        style="@style/TextAppearance.AppCompat.Small.Inverse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+</RelativeLayout>
